@@ -62,7 +62,9 @@ jobs:
     - name: Run Dependency Scan (pip-audit)
       continue-on-error: true
       run: |
+        pip install pip-audit
         pip-audit
+
 
 
     # =========================
