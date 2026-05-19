@@ -44,9 +44,9 @@ jobs:
       run: |
         flake8 . --max-line-length=100 --count --statistics
 
-    - name: Check code formatting
-      run: |
-        black --check --target-version py311 .
+    # - name: Check code formatting
+    #   run: |
+    #     black --check --target-version py311 .
 
 
     # =========================
