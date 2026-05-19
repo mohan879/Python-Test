@@ -2,7 +2,7 @@ name: Python CI Pipeline
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "myrepo" ]
   pull_request:
 
 jobs:
