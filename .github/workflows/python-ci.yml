@@ -44,10 +44,10 @@ jobs:
       run: |
         flake8 . --max-line-length=100 --count --statistics
 
-
-    - name: Check code formatting (Black)
+    - name: Check code formatting
       run: |
-        black --check .
+        black --check --target-version py311 .
+
 
     # =========================
     # ✅ SECURITY SCANNING
