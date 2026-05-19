@@ -54,7 +54,7 @@ jobs:
     # =========================
     - name: Run Bandit (SAST)
       run: |
-        bandit -r . -f txt
+        bandit -r . -x tests -f txt
 
     - name: Dependency Vulnerability Scan (Safety)
       run: |
