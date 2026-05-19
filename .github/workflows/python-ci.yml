@@ -26,15 +26,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest pytest-cov flake8 black bandit safety
-
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    # =========================
-    # ✅ UNIT TESTING
-    # =========================
+    
+    - name: Install project
+      run: pip install -e .
+    
     - name: Run Unit Tests
       run: |
-        pytest --cov=. --cov-report=xml --cov-report=term
+        pytest --cov=. --cov-report=xml --cov-report=ter
+
 
     # =========================
     # ✅ CODE QUALITY
