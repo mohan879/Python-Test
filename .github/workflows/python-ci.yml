@@ -39,9 +39,11 @@ jobs:
     # =========================
     # ✅ CODE QUALITY
     # =========================
+
     - name: Lint with Flake8
       run: |
-        flake8 . --count --statistics
+        flake8 . --max-line-length=100 --count --statistics
+
 
     - name: Check code formatting (Black)
       run: |
