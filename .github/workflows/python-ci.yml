@@ -57,9 +57,13 @@ jobs:
         # bandit -r . -x tests -f txt         #(for all severity)
         bandit -r starter_repo -lll -f txt || true   #(for high severity)
 
-    - name: Dependency Vulnerability Scan (Safety)
+
+    # ✅ ✅ ADD HERE (Dependency Scan)
+    - name: Run Dependency Scan (pip-audit)
+      continue-on-error: true
       run: |
-        safety check
+        pip-audit
+
 
     # =========================
     # ✅ REPORTS (Optional)
